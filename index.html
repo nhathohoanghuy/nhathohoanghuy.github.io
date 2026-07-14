@@ -3,233 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags chuyên sâu -->
     <title>Thư Ngỏ Hợp Tác Phát Triển Cộng Đồng | Luật gia Hoàng Quốc Huy</title>
-    <meta name="description" content="Thư ngỏ mời gọi liên kết hợp tác phát triển cộng đồng, nghiên cứu văn hóa, tôn giáo, hoạt động nhân đạo từ Luật gia Hoàng Quốc Huy (Liz QuieHui).">
-    <meta name="keywords" content="Hoàng Quốc Huy, Liz QuieHui, thư ngỏ hợp tác, phát triển cộng đồng, phong thủy thiên uy, luật gia hoàng quốc huy, nghiên cứu tôn giáo">
-    <link rel="canonical" href="https://github.io" />
-    
     <style>
-        :root { 
-            --primary: #0a2540; /* Xanh Navy đậm - Pháp lý, uy tín */
-            --accent: #b8860b;  /* Vàng Gold - Huyền học, Tôn giáo, cao cấp */
-            --text: #2b2b2b; 
-            --bg: #fdfdfd; 
-        }
-        body { 
-            font-family: 'Times New Roman', Times, serif, system-ui; 
-            line-height: 1.9; 
-            color: var(--text); 
-            background: #f4f6f8; 
-            margin: 0; 
-            padding: 10px;
-        }
-        .container { 
-            max-width: 800px; 
-            background: var(--bg); 
-            margin: 40px auto; 
-            padding: 50px 60px; 
-            border-radius: 4px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-            border-top: 6px solid var(--primary);
-            position: relative; 
-            z-index: 1;
-        }
-        
-        /* KHỐI CHỨA HÌNH RỒNG CHÌM ĐƯỢC TĂNG ĐỘ NÉT */
-        .dragon-background {
-            position: absolute;
-            top: 55%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 90%;
-            height: auto;
-            opacity: 0.06; /* Tăng độ hiển thị sắc nét hơn */
-            z-index: 1;
-            pointer-events: none; 
-        }
-
-        .content-wrapper {
-            position: relative;
-            z-index: 2; 
-        }
-
-        /* LOGO BÁT QUÁI VÀNG GOLD */
-        .logo-batquai {
-            text-align: center;
-            margin: 10px 0 25px 0;
-            position: relative;
-            z-index: 3;
-        }
-        .logo-batquai svg {
-            width: 100px;
-            height: 100px;
-        }
-
-        .header-decor {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .header-decor span {
-            display: inline-block;
-            width: 50px;
-            height: 2px;
-            background: var(--accent);
-            margin: 0 10px;
-            vertical-align: middle;
-        }
-        h1 { 
-            color: var(--primary); 
-            font-size: 1.9rem; 
-            margin: 0 0 10px 0; 
-            text-align: center;
-            letter-spacing: 0.5px;
-            font-weight: bold;
-        }
-        .subtitle {
-            color: var(--accent);
-            text-align: center;
-            font-size: 1.25rem;
-            font-style: italic;
-            margin-bottom: 40px;
-            font-weight: 600;
-        }
-        h2 { 
-            color: var(--primary); 
-            font-size: 1.3rem; 
-            margin-top: 35px; 
-            border-left: 3px solid var(--accent);
-            padding-left: 12px;
-        }
-        p { 
-            margin-bottom: 20px; 
-            text-align: justify; 
-            text-indent: 25px;
-        }
-        p.no-indent {
-            text-indent: 0;
-        }
-        ul {
-            padding-left: 25px;
-            margin-bottom: 25px;
-        }
-        li {
-            margin-bottom: 12px;
-            text-align: justify;
-            list-style-type: square;
-        }
-        .signature-section {
-            margin-top: 50px;
-            display: flex;
-            justify-content: flex-end;
-        }
-        .signature-box {
-            text-align: center;
-            min-width: 340px;
-            line-height: 1.6;
-        }
-        .signature-box .title-name {
-            font-size: 1.35rem;
-            font-weight: bold;
-            color: var(--primary);
-            margin-bottom: 5px;
-        }
-        .signature-box .title-sub {
-            font-size: 0.95rem;
-            color: #444;
-            font-style: italic;
-                }
-        .contact-box { 
-            background: #f8fafc; 
-            padding: 30px; 
-            border-radius: 4px; 
-            border: 1px solid #e2e8f0; 
-            margin-top: 45px; 
-        }
-        .contact-box h3 {
-            margin: 0 0 15px 0;
-            color: var(--primary);
-            font-size: 1.15rem;
-            letter-spacing: 0.5px;
-        }
-        .contact-link {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .contact-link:hover {
-            color: var(--accent);
-        }
-        .btn { 
-            display: inline-block; 
-            background: var(--primary); 
-            color: #fff; 
-            padding: 14px 35px; 
-            text-decoration: none; 
-            border-radius: 4px; 
-            font-weight: bold; 
-            margin-top: 20px; 
-            transition: 0.3s;
-            text-align: center;
-            border: 1px solid var(--primary);
-            letter-spacing: 0.5px;
-        }
-        .btn:hover { 
-            background: #fff; 
-            color: var(--primary);
-        }
-        footer { 
-            text-align: center; 
-            margin-top: 40px; 
-            padding-bottom: 40px;
-            font-size: 0.85rem; 
-            color: #777; 
-        }
-        @media (max-width: 600px) {
-            .container { padding: 35px 20px; margin: 10px auto; }
-            h1 { font-size: 1.5rem; }
-            .signature-section { justify-content: center; }
-            .signature-box { min-width: 100%; }
-        }
+        :root { --primary: #0a2540; --accent: #b8860b; --text: #2b2b2b; }
+        body { font-family: 'Times New Roman', serif; line-height: 1.8; color: var(--text); background: #f4f6f8; margin: 0; padding: 10px; }
+        .container { max-width: 780px; background: #fff; margin: 30px auto; padding: 40px 50px; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 6px solid var(--primary); position: relative; z-index: 1; }
+        .dragon-background { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 85%; height: auto; opacity: 0.05; z-index: 1; pointer-events: none; }
+        .content-wrapper { position: relative; z-index: 2; }
+        .logo-batquai { text-align: center; margin: 10px 0 25px 0; }
+        .logo-batquai svg { width: 95px; height: 95px; }
+        h1 { color: var(--primary); font-size: 1.8rem; margin: 0 0 5px 0; text-align: center; font-weight: bold; }
+        .subtitle { color: var(--accent); text-align: center; font-size: 1.2rem; font-style: italic; margin-bottom: 35px; font-weight: 600; }
+        h2 { color: var(--primary); font-size: 1.25rem; margin-top: 30px; border-left: 3px solid var(--accent); padding-left: 12px; }
+        p { margin-bottom: 18px; text-align: justify; text-indent: 25px; }
+        p.no-indent { text-indent: 0; }
+        ul { padding-left: 25px; margin-bottom: 20px; }
+        li { margin-bottom: 10px; text-align: justify; list-style-type: square; }
+        .signature-section { margin-top: 40px; display: flex; justify-content: flex-end; }
+        .signature-box { text-align: center; min-width: 340px; }
+        .signature-box .title-name { font-size: 1.3rem; font-weight: bold; color: var(--primary); }
+        .signature-box .title-sub { font-size: 0.95rem; color: #444; font-style: italic; line-height: 1.5; }
+        .contact-box { background: #f8fafc; padding: 25px; border-radius: 4px; border: 1px solid #e2e8f0; margin-top: 40px; }
+        .contact-link { color: var(--primary); text-decoration: none; font-weight: bold; }
+        .btn { display: block; max-width: 280px; background: var(--primary); color: #fff; padding: 12px; text-decoration: none; border-radius: 4px; font-weight: bold; margin: 20px auto 0 auto; text-align: center; border: 1px solid var(--primary); }
+        .btn:hover { background: #fff; color: var(--primary); }
+        footer { text-align: center; margin-top: 30px; font-size: 0.85rem; color: #777; }
+        @media (max-width: 600px) { .container { padding: 25px 15px; } h1 { font-size: 1.4rem; } .signature-section { justify-content: center; } }
     </style>
 </head>
 <body>
-
     <main class="container">
-        
-        <!-- ĐỒ HỌA HÌNH RỒNG UỐN LƯỢN HIỂN THỊ RÕ NÉT -->
-        <svg class="dragon-background" viewBox="0 0 100 100" xmlns="http://w3.org">
-            <path d="M50,8 C40,-2 25,5 20,15 C12,28 30,35 25,52 C18,68 5,60 10,78 C15,92 40,95 55,82 C70,70 88,82 92,65 C95,48 78,42 82,28 C85,12 68,5 60,15 C52,24 55,35 45,38 C35,40 32,28 40,22 C48,18 52,15 50,8 Z M52,25 C55,28 50,35 45,32 C40,28 48,22 52,25 Z M28,58 C35,52 52,68 58,55 C62,42 45,48 28,58 Z" fill="none" stroke="#b8860b" stroke-width="1.2" stroke-linecap="round"/>
+        <!-- HÌNH TƯỢNG THẦN LONG UY NGHI -->
+        <svg class="dragon-background" viewBox="0 0 200 200" xmlns="http://w3.org">
+            <g fill="none" stroke="#b8860b" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M100,20 C130,10 160,25 150,55 C140,85 170,110 140,140 C110,170 60,170 45,140 C30,110 60,95 50,65 C40,35 70,25 100,20 Z" />
+                <path d="M105,25 C132,16 155,30 145,55 C135,80 162,105 135,135 C108,165 65,162 52,138 C38,112 65,100 55,72 C45,45 75,32 105,25 Z" />
+                <path d="M95,20 C90,15 80,12 70,18 C65,22 68,30 75,32 M85,16 C80,8 65,10 60,5" />
+                <path d="M72,32 C60,35 45,30 35,42 C28,50 38,55 45,50 M76,34 C65,42 55,55 52,68" />
+                <path d="M145,55 C155,52 165,58 170,65 M162,58 L172,56" />
+                <path d="M45,140 C35,145 25,140 20,130 M28,138 L18,142" />
+                <path d="M110,21 L108,25 M120,24 L117,28 M130,29 L126,33 M140,37 L135,41 M146,47 L141,50 M148,58 L142,59 M145,68 L140,68 M146,78 L141,77 M151,87 L146,85" />
+            </g>
         </svg>
 
-        <!-- ĐỒ HỌA LOGO BÁT QUÁI VÀNG GOLD SANG TRỌNG -->
+        <!-- ẤN BÁT QUÁI THÁI CỰC -->
         <div class="logo-batquai">
             <svg viewBox="0 0 100 100" xmlns="http://w3.org">
                 <circle cx="50" cy="50" r="46" fill="none" stroke="#b8860b" stroke-width="2"/>
                 <circle cx="50" cy="50" r="42" fill="none" stroke="#b8860b" stroke-width="0.75"/>
-                <path d="M42,14 L58,14 M42,11 L58,11 M42,8 L58,8" stroke="#0a2540" stroke-width="2" fill="none"/>
-                <path d="M42,86 L58,86 M42,89 L48,89 M52,89 L58,89 M42,92 L58,92" stroke="#0a2540" stroke-width="2" fill="none"/>
-                <path d="M11,42 L11,58 M8,42 L8,48 M8,52 L8,58 M14,42 L14,48 M14,52 L14,58" stroke="#0a2540" stroke-width="2" fill="none"/>
-                <path d="M89,42 L89,58 M86,42 L86,58 M92,42 L92,48 M92,52 L92,58" stroke="#0a2540" stroke-width="2" fill="none"/>
+                <path d="M42,14 L58,14 M42,11 L58,11 M42,8 L58,8 M42,86 L58,86 M42,89 L48,89 M52,89 L58,89 M42,92 L58,92" stroke="#0a2540" stroke-width="2" fill="none"/>
+                <path d="M11,42 L11,58 M8,42 L8,48 M8,52 L8,58 M14,42 L14,48 M14,52 L14,58 M89,42 L89,58 M86,42 L86,58 M92,42 L92,48 M92,52 L92,58" stroke="#0a2540" stroke-width="2" fill="none"/>
                 <path d="M50,20 A30,30 0 0,0 50,80 A15,15 0 0,0 50,50 A15,15 0 0,1 50,20 Z" fill="#0a2540"/>
                 <path d="M50,20 A30,30 0 0,1 50,80 A15,15 0 0,0 50,50 A15,15 0 0,1 50,20 Z" fill="none" stroke="#0a2540" stroke-width="1"/>
-                <circle cx="50" cy="35" r="4" fill="#fdfdfd"/>
-                <circle cx="50" cy="65" r="4" fill="#0a2540"/>
+                <circle cx="50" cy="35" r="4" fill="#fff"/><circle cx="50" cy="65" r="4" fill="#0a2540"/>
             </svg>
         </div>
 
         <div class="content-wrapper">
-            <div class="header-decor">
-                <span></span><b style="color: var(--accent); font-size: 0.9rem; letter-spacing: 2px;">VĂN PHÒNG LUẬT GIA</b><span></span>
-            </div>
             <h1>THƯ NGỎ</h1>
             <div class="subtitle">Về việc mời gọi liên kết hợp tác phát triển cộng đồng</div>
             
             <p class="no-indent"><strong>Kính gửi: Quý Tổ chức, Quý Doanh nhân, Quý Chức sắc Tôn giáo, các Nhà nghiên cứu, Học giả cùng toàn thể Quý Anh/Chị quan tâm.</strong></p>
-            
             <p>Lời đầu tiên, xin kính chúc Quý vị cùng gia quyến luôn mạnh khỏe, bình an, hạnh phúc và thành công.</p>
-
             <p>Trong bối cảnh thế giới ngày càng kết nối, sự hợp tác giữa các cá nhân và tổ chức là nền tảng để tạo nên những giá trị bền vững cho xã hội. Với tinh thần phụng sự – kết nối – phát triển, chúng tôi mong muốn xây dựng một mạng lưới hợp tác rộng mở, quy tụ những con người có cùng khát vọng đóng góp cho cộng đồng.</p>
 
             <h2>Chúng tôi trân trọng mời gọi Quý vị cùng tham gia liên kết trong các lĩnh vực như:</h2>
@@ -240,40 +75,32 @@
                 <li>Kết nối doanh nghiệp, chuyên gia, học giả và các tổ chức trong nước và quốc tế.</li>
                 <li>Tổ chức hội thảo, tọa đàm, đào tạo và các chương trình hợp tác khác.</li>
             </ul>
-              <p>Chúng tôi tin rằng mỗi cá nhân đều có những giá trị riêng. Khi cùng chung tay hợp tác, những giá trị đó sẽ được lan tỏa mạnh mẽ hơn, góp phần xây dựng một cộng đồng đoàn kết, văn minh và phát triển bền vững.</p>
 
+            <p>Chúng tôi tin rằng mỗi cá nhân đều có những giá trị riêng. Khi cùng chung tay hợp tác, những giá trị đó sẽ được lan tỏa mạnh mẽ hơn, góp phần xây dựng một cộng đồng đoàn kết, văn minh và phát triển bền vững.</p>
             <p>Chúng tôi luôn sẵn sàng lắng nghe mọi ý tưởng, sáng kiến và mô hình hợp tác trên tinh thần tôn trọng, bình đẳng, minh bạch và cùng phát triển.</p>
-
             <p>Rất mong nhận được sự quan tâm, đồng hành và hợp tác của Quý vị.</p>
-
             <p>Xin chân thành cảm ơn và kính chúc Quý vị sức khỏe, hạnh phúc và thành công.</p>
-            
             <p class="no-indent">Trân trọng kính chào!</p>
 
-            <!-- Khu vực danh tính và chữ ký trang trọng -->
             <div class="signature-section">
                 <div class="signature-box">
                     <div class="title-name">Luật gia. Hoàng Quốc Huy</div>
                     <div class="title-sub">Thừa tác viên được phong chức bởi<br><b>Universal Life Church Ministries (USA)</b></div>
-                    <div class="title-sub" style="margin-top: 6px;">Tiến sĩ Thần học Danh dự (D.Div.)<br><b>Universal Life Church Ministries (USA)</b></div>
+                    <div class="title-sub" style="margin-top:4px;">Tiến sĩ Thần học Danh dự (D.Div.)<br><b>Universal Life Church Ministries (USA)</b></div>
                 </div>
             </div>
 
-            <!-- Thông tin liên hệ tối ưu kết nối nhanh -->
             <div class="contact-box">
-                <h3>THÔNG TIN LIÊN HỆ CHÍNH THỨC</h3>
-                <p class="no-indent" style="margin-bottom: 8px;">📧 Email: <a href="mailto:hoangquochuysg81@gmail.com" class="contact-link">hoangquochuysg81@gmail.com</a></p>
-                <p class="no-indent" style="margin-bottom: 8px;">📞 Điện thoại: <a href="tel:0908587869" class="contact-link">0908 587 869</a></p>
-                <p class="no-indent" style="margin-bottom: 8px;">🌐 Website chính thức: <a href="https://blogspot.com" target="_blank" class="contact-link">://blogspot.com</a></p>
-                
-                <center><a href="mailto:hoangquochuysg81@://gmail.com" class="btn">GỬI THƯ ĐỀ XUẤT HỢP TÁC NGAY</a></center>
+                <strong style="color:var(--primary); display:block; margin-bottom:12px;">THÔNG TIN LIÊN HỆ CHÍNH THỨC</strong>
+                <div style="line-height:1.7;">
+                    📧 Email: <a href="mailto:hoangquochuysg81@gmail.com" class="contact-link">hoangquochuysg81@gmail.com</a><br>
+                    📞 Điện thoại: <a href="tel:0908587869" class="contact-link">0908 587 869</a><br>
+                    🌐 Website: <a href="https://hoangquochuyvn.blogspot.com" target="_blank" class="contact-link">://blogspot.com</a>
+                </div>
+                <a href="mailto:hoangquochuysg81@gmail.com" class="btn">GỬI THƯ ĐỀ XUẤT HỢP TÁC</a>
             </div>
         </div>
     </main>
-
-    <footer>
-        <p>© 2026 Bản quyền thuộc về Luật gia Hoàng Quốc Huy. Mọi quyền được bảo lưu.</p>
-    </footer>
-
+    <footer><p>© 2026 Bản quyền thuộc về Luật gia Hoàng Quốc Huy. Mọi quyền được bảo lưu.</p></footer>
 </body>
 </html>
