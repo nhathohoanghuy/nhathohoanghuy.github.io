@@ -12,14 +12,14 @@
     
     <style>
         :root { 
-            --primary: #0a2540; /* Xanh Navy đậm - Thể hiện luật pháp, sự uy tín */
-            --accent: #b8860b;  /* Vàng Gold - Thể hiện huyền học, tôn giáo, cao cấp */
+            --primary: #0a2540; /* Xanh Navy đậm - Pháp lý, uy tín */
+            --accent: #b8860b;  /* Vàng Gold - Huyền học, Tôn giáo, cao cấp */
             --text: #2b2b2b; 
             --bg: #fdfdfd; 
         }
         body { 
             font-family: 'Times New Roman', Times, serif, system-ui; 
-            line-height: 1.8; 
+            line-height: 1.9; 
             color: var(--text); 
             background: #f4f6f8; 
             margin: 0; 
@@ -33,10 +33,47 @@
             border-radius: 4px; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.06);
             border-top: 6px solid var(--primary);
+            position: relative; /* Để làm nền rồng ẩn bên dưới */
+            z-index: 1;
         }
+        
+        /* ĐỒ HỌA RỒNG ẨN CHÌM DƯỚI NỀN WEB (TÀNG PHONG TỤ KHÍ) */
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 52%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 85%;
+            height: 85%;
+            /* Sử dụng phác họa Rồng cuộn uốn lượn mờ nghệ thuật */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://w3.org' viewBox='0 0 100 100'%3E%3Cpath d='M50,10 C35,5 20,15 25,30 C30,45 10,50 15,65 C20,80 40,95 55,85 C70,75 90,85 85,60 C80,35 95,25 75,20 C65,18 60,15 50,10 Z M55,30 C60,35 45,45 40,35 C35,25 50,25 55,30 Z M30,60 C40,55 60,70 65,55 C70,40 50,50 30,60 Z' fill='none' stroke='%23b8860b' stroke-width='0.5' stroke-dasharray='2,2' opacity='0.05'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            z-index: -1; /* Nằm dưới chữ */
+            pointer-events: none;
+        }
+
+        /* LỚP ĐỆM GIÚP CHỮ KHÔNG BỊ KHÓ ĐỌC */
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* LOGO BÁT QUÁI ĐÚNG CHUẨN ĐƯỢC VẼ BẰNG MÃ CAO CẤP */
+        .logo-batquai {
+            text-align: center;
+            margin: 10px 0 25px 0;
+        }
+        .logo-batquai svg {
+            width: 100px;
+            height: 100px;
+        }
+
         .header-decor {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         .header-decor span {
             display: inline-block;
@@ -48,7 +85,7 @@
         }
         h1 { 
             color: var(--primary); 
-            font-size: 1.8rem; 
+            font-size: 1.9rem; 
             margin: 0 0 10px 0; 
             text-align: center;
             letter-spacing: 0.5px;
@@ -57,7 +94,7 @@
         .subtitle {
             color: var(--accent);
             text-align: center;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             font-style: italic;
             margin-bottom: 40px;
             font-weight: 600;
@@ -65,24 +102,24 @@
         h2 { 
             color: var(--primary); 
             font-size: 1.3rem; 
-            margin-top: 30px; 
+            margin-top: 35px; 
             border-left: 3px solid var(--accent);
             padding-left: 12px;
         }
         p { 
             margin-bottom: 20px; 
             text-align: justify; 
-            text-indent: 20px;
+            text-indent: 25px;
         }
         p.no-indent {
             text-indent: 0;
         }
         ul {
-            padding-left: 20px;
+            padding-left: 25px;
             margin-bottom: 25px;
         }
         li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             text-align: justify;
             list-style-type: square;
         }
@@ -93,18 +130,18 @@
         }
         .signature-box {
             text-align: center;
-            min-width: 320px;
+            min-width: 340px;
             line-height: 1.6;
         }
         .signature-box .title-name {
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             font-weight: bold;
             color: var(--primary);
             margin-bottom: 5px;
         }
         .signature-box .title-sub {
             font-size: 0.95rem;
-            color: #555;
+            color: #444;
             font-style: italic;
         }
         .contact-box { 
@@ -112,12 +149,13 @@
             padding: 30px; 
             border-radius: 4px; 
             border: 1px solid #e2e8f0; 
-            margin-top: 40px; 
+            margin-top: 45px; 
         }
         .contact-box h3 {
             margin: 0 0 15px 0;
             color: var(--primary);
             font-size: 1.15rem;
+            letter-spacing: 0.5px;
         }
         .contact-link {
             color: var(--primary);
@@ -131,7 +169,7 @@
             display: inline-block; 
             background: var(--primary); 
             color: #fff; 
-            padding: 12px 30px; 
+            padding: 14px 35px; 
             text-decoration: none; 
             border-radius: 4px; 
             font-weight: bold; 
@@ -139,6 +177,7 @@
             transition: 0.3s;
             text-align: center;
             border: 1px solid var(--primary);
+            letter-spacing: 0.5px;
         }
         .btn:hover { 
             background: #fff; 
@@ -152,7 +191,7 @@
             color: #777; 
         }
         @media (max-width: 600px) {
-            .container { padding: 30px 20px; margin: 10px auto; }
+            .container { padding: 35px 20px; margin: 10px auto; }
             h1 { font-size: 1.5rem; }
             .signature-section { justify-content: center; }
             .signature-box { min-width: 100%; }
@@ -162,55 +201,75 @@
 <body>
 
     <main class="container">
-        <!-- Tiêu đề trang trọng -->
-        <div class="header-decor">
-            <span></span><b style="color: var(--accent); font-size: 0.9rem; letter-spacing: 2px;">VĂN PHÒNG LUẬT GIA</b><span></span>
+        
+        <!-- ĐỒ HỌA LOGO BÁT QUÁI VÀNG GOLD SANG TRỌNG -->
+        <div class="logo-batquai">
+            <svg viewBox="0 0 100 100" xmlns="http://w3.org">
+                <circle cx="50" cy="50" r="46" fill="none" stroke="#b8860b" stroke-width="2"/>
+                <circle cx="50" cy="50" r="42" fill="none" stroke="#b8860b" stroke-width="0.75"/>
+                <!-- Các vạch Bát quái vòng ngoài -->
+                <path d="M42,14 L58,14 M42,11 L58,11 M42,8 L58,8" stroke="#0a2540" stroke-width="2" fill="none"/>
+                <path d="M42,86 L58,86 M42,89 L48,89 M52,89 L58,89 M42,92 L58,92" stroke="#0a2540" stroke-width="2" fill="none"/>
+                <path d="M11,42 L11,58 M8,42 L8,48 M8,52 L8,58 M14,42 L14,48 M14,52 L14,58" stroke="#0a2540" stroke-width="2" fill="none"/>
+                <path d="M89,42 L89,58 M86,42 L86,58 M92,42 L92,48 M92,52 L92,58" stroke="#0a2540" stroke-width="2" fill="none"/>
+                <!-- Hình Thái cực âm dương ở lõi tâm -->
+                <path d="M50,20 A30,30 0 0,0 50,80 A15,15 0 0,0 50,50 A15,15 0 0,1 50,20 Z" fill="#0a2540"/>
+                <path d="M50,20 A30,30 0 0,1 50,80 A15,15 0 0,0 50,50 A15,15 0 0,1 50,20 Z" fill="none" stroke="#0a2540" stroke-width="1"/>
+                <circle cx="50" cy="35" r="4" fill="#fdfdfd"/>
+                <circle cx="50" cy="65" r="4" fill="#0a2540"/>
+            </svg>
         </div>
-        <h1>THƯ NGỎ</h1>
-        <div class="subtitle">Về việc mời gọi liên kết hợp tác phát triển cộng đồng</div>
-        
-        <p class="no-indent"><strong>Kính gửi: Quý Tổ chức, Quý Doanh nhân, Quý Chức sắc Tôn giáo, các Nhà nghiên cứu, Học giả cùng toàn thể Quý Anh/Chị quan tâm.</strong></p>
-        
-        <p>Lời đầu tiên, xin kính chúc Quý vị cùng gia quyến luôn mạnh khỏe, bình an, hạnh phúc và thành công.</p>
 
-        <p>Trong bối cảnh thế giới ngày càng kết nối, sự hợp tác giữa các cá nhân và tổ chức là nền tảng để tạo nên những giá trị bền vững cho xã hội. Với tinh thần phụng sự – kết nối – phát triển, chúng tôi mong muốn xây dựng một mạng lưới hợp tác rộng mở, quy tụ những con người có cùng khát vọng đóng góp cho cộng đồng.</p>
-
-        <h2>Chúng tôi trân trọng mời gọi Quý vị cùng tham gia liên kết trong các lĩnh vực như:</h2>
-        <ul>
-            <li>Nghiên cứu văn hóa, tôn giáo, giáo dục và khoa học xã hội.</li>
-            <li>Hoạt động từ thiện, nhân đạo và phát triển cộng đồng.</li>
-            <li>Truyền thông, xuất bản, xây dựng website, diễn đàn và chuyển đổi số.</li>
-            <li>Kết nối doanh nghiệp, chuyên gia, học giả và các tổ chức trong nước và quốc tế.</li>
-            <li>Tổ chức hội thảo, tọa đàm, đào tạo và các chương trình hợp tác khác.</li>
-        </ul>
-
-        <p>Chúng tôi tin rằng mỗi cá nhân đều có những giá trị riêng. Khi cùng chung tay hợp tác, những giá trị đó sẽ được lan tỏa mạnh mẽ hơn, góp phần xây dựng một cộng đồng đoàn kết, văn minh và phát triển bền vững.</p>
-
-        <p>Chúng tôi luôn sẵn sàng lắng nghe mọi ý tưởng, sáng kiến và mô hình hợp tác trên tinh thần tôn trọng, bình đẳng, minh bạch và cùng phát triển.</p>
-
-        <p>Rất mong nhận được sự quan tâm, đồng hành và hợp tác của Quý vị.</p>
-
-        <p>Xin chân thành cảm ơn và kính chúc Quý vị sức khỏe, hạnh phúc và thành công.</p>
-        
-        <p class="no-indent">Trân trọng kính chào!</p>
-
-        <!-- Khu vực chữ ký trang trọng -->
-        <div class="signature-section">
-            <div class="signature-box">
-                <div class="title-name">Luật gia. Hoàng Quốc Huy</div>
-                <div class="title-sub">Thừa tác viên được phong chức bởi<br><b>Universal Life Church Ministries (USA)</b></div>
-                <div class="title-sub" style="margin-top: 5px;">Tiến sĩ Thần học Danh dự (D.Div.)<br><b>Universal Life Church Ministries (USA)</b></div>
+        <div class="content-wrapper">
+            <!-- Tiêu đề trang trọng -->
+            <div class="header-decor">
+                <span></span><b style="color: var(--accent); font-size: 0.9rem; letter-spacing: 2px;">VĂN PHÒNG LUẬT GIA</b><span></span>
             </div>
-        </div>
-
-        <!-- Thông tin liên hệ tối ưu kết nối nhanh -->
-        <div class="contact-box">
-            <h3>THÔNG TIN LIÊN HỆ CHÍNH THỨC</h3>
-            <p class="no-indent" style="margin-bottom: 8px;">📧 Email: <a href="mailto:hoangquochuysg81@gmail.com" class="contact-link">hoangquochuysg81@gmail.com</a></p>
-            <p class="no-indent" style="margin-bottom: 8px;">📞 Điện thoại: <a href="tel:0908587869" class="contact-link">0908 587 869</a></p>
-            <p class="no-indent" style="margin-bottom: 8px;">🌐 Website chính thức: <a href="https://hoangquochuyvn.blogspot.com/" target="_blank" class="contact-link">hoangquochuyvn.blogspot.com</a></p>
+            <h1>THƯ NGỎ</h1>
+            <div class="subtitle">Về việc mời gọi liên kết hợp tác phát triển cộng đồng</div>
             
-            <center><a href="mailto:hoangquochuysg81@://gmail.com" class="btn">GỬI THƯ ĐỀ XUẤT HỢP TÁC NGAY</a></center>
+            <p class="no-indent"><strong>Kính gửi: Quý Tổ chức, Quý Doanh nhân, Quý Chức sắc Tôn giáo, các Nhà nghiên cứu, Học giả cùng toàn thể Quý Anh/Chị quan tâm.</strong></p>
+            
+            <p>Lời đầu tiên, xin kính chúc Quý vị cùng gia quyến luôn mạnh khỏe, bình an, hạnh phúc và thành công.</p>
+
+            <p>Trong bối cảnh thế giới ngày càng kết nối, sự hợp tác giữa các cá nhân và tổ chức là nền tảng để tạo nên những giá trị bền vững cho xã hội. Với tinh thần phụng sự – kết nối – phát triển, chúng tôi mong muốn xây dựng một mạng lưới hợp tác rộng mở, quy tụ những con người có cùng khát vọng đóng góp cho cộng đồng.</p>
+
+            <h2>Chúng tôi trân trọng mời gọi Quý vị cùng tham gia liên kết trong các lĩnh vực như:</h2>
+            <ul>
+                <li>Nghiên cứu văn hóa, tôn giáo, giáo dục và khoa học xã hội.</li>
+                <li>Hoạt động từ thiện, nhân đạo và phát triển cộng đồng.</li>
+                <li>Truyền thông, xuất bản, xây dựng website, diễn đàn và chuyển đổi số.</li>
+                <li>Kết nối doanh nghiệp, chuyên gia, học giả và các tổ chức trong nước và quốc tế.</li>
+                <li>Tổ chức hội thảo, tọa đàm, đào tạo và các chương trình hợp tác khác.</li>
+            </ul>
+              <p>Chúng tôi tin rằng mỗi cá nhân đều có những giá trị riêng. Khi cùng chung tay hợp tác, những giá trị đó sẽ được lan tỏa mạnh mẽ hơn, góp phần xây dựng một cộng đồng đoàn kết, văn minh và phát triển bền vững.</p>
+
+            <p>Chúng tôi luôn sẵn sàng lắng nghe mọi ý tưởng, sáng kiến và mô hình hợp tác trên tinh thần tôn trọng, bình đẳng, minh bạch và cùng phát triển.</p>
+
+            <p>Rất mong nhận được sự quan tâm, đồng hành và hợp tác của Quý vị.</p>
+
+            <p>Xin chân thành cảm ơn và kính chúc Quý vị sức khỏe, hạnh phúc và thành công.</p>
+            
+            <p class="no-indent">Trân trọng kính chào!</p>
+
+            <!-- Khu vực danh tính và chữ ký trang trọng -->
+            <div class="signature-section">
+                <div class="signature-box">
+                    <div class="title-name">Luật gia. Hoàng Quốc Huy</div>
+                    <div class="title-sub">Thừa tác viên được phong chức bởi<br><b>Universal Life Church Ministries (USA)</b></div>
+                    <div class="title-sub" style="margin-top: 6px;">Tiến sĩ Thần học Danh dự (D.Div.)<br><b>Universal Life Church Ministries (USA)</b></div>
+                </div>
+            </div>
+
+            <!-- Thông tin liên hệ tối ưu kết nối nhanh -->
+            <div class="contact-box">
+                <h3>THÔNG TIN LIÊN HỆ CHÍNH THỨC</h3>
+                <p class="no-indent" style="margin-bottom: 8px;">📧 Email: <a href="mailto:hoangquochuysg81@gmail.com" class="contact-link">hoangquochuysg81@gmail.com</a></p>
+                <p class="no-indent" style="margin-bottom: 8px;">📞 Điện thoại: <a href="tel:0908587869" class="contact-link">0908 587 869</a></p>
+                <p class="no-indent" style="margin-bottom: 8px;">🌐 Website chính thức: <a href="https://blogspot.com" target="_blank" class="contact-link">://blogspot.com</a></p>
+                
+                <center><a href="mailto:hoangquochuysg81@://gmail.com" class="btn">GỬI THƯ ĐỀ XUẤT HỢP TÁC NGAY</a></center>
+            </div>
         </div>
     </main>
 
