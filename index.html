@@ -33,38 +33,34 @@
             border-radius: 4px; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.06);
             border-top: 6px solid var(--primary);
-            position: relative; /* Để làm nền rồng ẩn bên dưới */
+            position: relative; 
             z-index: 1;
         }
         
-        /* ĐỒ HỌA RỒNG ẨN CHÌM DƯỚI NỀN WEB (TÀNG PHONG TỤ KHÍ) */
-        .container::before {
-            content: "";
+        /* KHỐI CHỨA HÌNH RỒNG CHÌM ĐƯỢC TĂNG ĐỘ NÉT */
+        .dragon-background {
             position: absolute;
-            top: 52%;
+            top: 55%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 85%;
-            height: 85%;
-            /* Sử dụng phác họa Rồng cuộn uốn lượn mờ nghệ thuật */
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://w3.org' viewBox='0 0 100 100'%3E%3Cpath d='M50,10 C35,5 20,15 25,30 C30,45 10,50 15,65 C20,80 40,95 55,85 C70,75 90,85 85,60 C80,35 95,25 75,20 C65,18 60,15 50,10 Z M55,30 C60,35 45,45 40,35 C35,25 50,25 55,30 Z M30,60 C40,55 60,70 65,55 C70,40 50,50 30,60 Z' fill='none' stroke='%23b8860b' stroke-width='0.5' stroke-dasharray='2,2' opacity='0.05'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            z-index: -1; /* Nằm dưới chữ */
-            pointer-events: none;
+            width: 90%;
+            height: auto;
+            opacity: 0.06; /* Tăng độ hiển thị sắc nét hơn */
+            z-index: 1;
+            pointer-events: none; 
         }
 
-        /* LỚP ĐỆM GIÚP CHỮ KHÔNG BỊ KHÓ ĐỌC */
         .content-wrapper {
             position: relative;
-            z-index: 2;
+            z-index: 2; 
         }
 
-        /* LOGO BÁT QUÁI ĐÚNG CHUẨN ĐƯỢC VẼ BẰNG MÃ CAO CẤP */
+        /* LOGO BÁT QUÁI VÀNG GOLD */
         .logo-batquai {
             text-align: center;
             margin: 10px 0 25px 0;
+            position: relative;
+            z-index: 3;
         }
         .logo-batquai svg {
             width: 100px;
@@ -143,7 +139,7 @@
             font-size: 0.95rem;
             color: #444;
             font-style: italic;
-        }
+                }
         .contact-box { 
             background: #f8fafc; 
             padding: 30px; 
@@ -202,17 +198,20 @@
 
     <main class="container">
         
+        <!-- ĐỒ HỌA HÌNH RỒNG UỐN LƯỢN HIỂN THỊ RÕ NÉT -->
+        <svg class="dragon-background" viewBox="0 0 100 100" xmlns="http://w3.org">
+            <path d="M50,8 C40,-2 25,5 20,15 C12,28 30,35 25,52 C18,68 5,60 10,78 C15,92 40,95 55,82 C70,70 88,82 92,65 C95,48 78,42 82,28 C85,12 68,5 60,15 C52,24 55,35 45,38 C35,40 32,28 40,22 C48,18 52,15 50,8 Z M52,25 C55,28 50,35 45,32 C40,28 48,22 52,25 Z M28,58 C35,52 52,68 58,55 C62,42 45,48 28,58 Z" fill="none" stroke="#b8860b" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+
         <!-- ĐỒ HỌA LOGO BÁT QUÁI VÀNG GOLD SANG TRỌNG -->
         <div class="logo-batquai">
             <svg viewBox="0 0 100 100" xmlns="http://w3.org">
                 <circle cx="50" cy="50" r="46" fill="none" stroke="#b8860b" stroke-width="2"/>
                 <circle cx="50" cy="50" r="42" fill="none" stroke="#b8860b" stroke-width="0.75"/>
-                <!-- Các vạch Bát quái vòng ngoài -->
                 <path d="M42,14 L58,14 M42,11 L58,11 M42,8 L58,8" stroke="#0a2540" stroke-width="2" fill="none"/>
                 <path d="M42,86 L58,86 M42,89 L48,89 M52,89 L58,89 M42,92 L58,92" stroke="#0a2540" stroke-width="2" fill="none"/>
                 <path d="M11,42 L11,58 M8,42 L8,48 M8,52 L8,58 M14,42 L14,48 M14,52 L14,58" stroke="#0a2540" stroke-width="2" fill="none"/>
                 <path d="M89,42 L89,58 M86,42 L86,58 M92,42 L92,48 M92,52 L92,58" stroke="#0a2540" stroke-width="2" fill="none"/>
-                <!-- Hình Thái cực âm dương ở lõi tâm -->
                 <path d="M50,20 A30,30 0 0,0 50,80 A15,15 0 0,0 50,50 A15,15 0 0,1 50,20 Z" fill="#0a2540"/>
                 <path d="M50,20 A30,30 0 0,1 50,80 A15,15 0 0,0 50,50 A15,15 0 0,1 50,20 Z" fill="none" stroke="#0a2540" stroke-width="1"/>
                 <circle cx="50" cy="35" r="4" fill="#fdfdfd"/>
@@ -221,7 +220,6 @@
         </div>
 
         <div class="content-wrapper">
-            <!-- Tiêu đề trang trọng -->
             <div class="header-decor">
                 <span></span><b style="color: var(--accent); font-size: 0.9rem; letter-spacing: 2px;">VĂN PHÒNG LUẬT GIA</b><span></span>
             </div>
