@@ -1,112 +1,605 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta name="google-site-verification" content="D7HjupUmUSjni4riBqwr2YbzzpLahQ8Q8oldHwdPkN0" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Meta Tags chuyên sâu -->
-    <title>Thư Ngỏ Hợp Tác Phát Triển Cộng Đồng | Luật gia Hoàng Quốc Huy</title>
-    <meta name="description" content="Thư ngỏ mời gọi liên kết hợp tác phát triển cộng đồng, nghiên cứu văn hóa, tôn giáo, hoạt động nhân đạo từ Luật gia Hoàng Quốc Huy.">
-    <meta name="keywords" content="Hoàng Quốc Huy, thư ngỏ hợp tác, phát triển cộng đồng, phong thủy thiên uy, luật gia hoàng quốc huy, nghiên cứu tôn giáo">
-    <link rel="canonical" href="https://github.io" />
+    <title>Grand Master Thiên Uy - Fanpage Home & Website</title>
+    <!-- Thư viện Icon FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        :root { --primary: #0a2540; --accent: #b8860b; --text: #2b2b2b; }
-        body { font-family: 'Times New Roman', serif; line-height: 1.8; color: var(--text); background: #f4f6f8; margin: 0; padding: 10px; }
-        .container { max-width: 780px; background: #fff; margin: 30px auto; padding: 40px 50px; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 6px solid var(--primary); position: relative; z-index: 1; }
-        
-        /* HÌNH ÂM DƯƠNG (THÁI CỰC) LỚN ẨN MỜ DƯỚI NỀN */
-        .amduong-background { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 70%; height: auto; opacity: 0.035; z-index: 1; pointer-events: none; }
-        
-        .content-wrapper { position: relative; z-index: 2; }
-        .logo-batquai { text-align: center; margin: 10px 0 25px 0; }
-        .logo-batquai svg { width: 95px; height: 95px; }
-        h1 { color: var(--primary); font-size: 1.8rem; margin: 0 0 5px 0; text-align: center; font-weight: bold; }
-        .subtitle { color: var(--accent); text-align: center; font-size: 1.2rem; font-style: italic; margin-bottom: 35px; font-weight: 600; }
-        h2 { color: var(--primary); font-size: 1.25rem; margin-top: 30px; border-left: 3px solid var(--accent); padding-left: 12px; }
-        p { margin-bottom: 18px; text-align: justify; text-indent: 25px; }
-        p.no-indent { text-indent: 0; }
-        ul { padding-left: 25px; margin-bottom: 20px; }
-        li { margin-bottom: 10px; text-align: justify; list-style-type: square; }
-        .signature-section { margin-top: 40px; display: flex; justify-content: flex-end; }
-        .signature-box { text-align: center; min-width: 340px; }
-        .signature-box .title-name { font-size: 1.3rem; font-weight: bold; color: var(--primary); }
-        .signature-box .title-sub { font-size: 0.95rem; color: #444; font-style: italic; line-height: 1.5; }
-        .contact-box { background: #f8fafc; padding: 25px; border-radius: 4px; border: 1px solid #e2e8f0; margin-top: 40px; }
-        .contact-link { color: var(--primary); text-decoration: none; font-weight: bold; }
-        .btn { display: block; max-width: 280px; background: var(--primary); color: #fff; padding: 12px; text-decoration: none; border-radius: 4px; font-weight: bold; margin: 20px auto 0 auto; text-align: center; border: 1px solid var(--primary); }
-        .btn:hover { background: #fff; color: var(--primary); }
-        footer { text-align: center; margin-top: 30px; font-size: 0.85rem; color: #777; }
-        @media (max-width: 600px) { .container { padding: 25px 15px; } h1 { font-size: 1.4rem; } .signature-section { justify-content: center; } }
+        :root {
+            --fb-blue: #1877f2;
+            --fb-blue-hover: #166fe5;
+            --fb-bg: #f0f2f5;
+            --fb-white: #ffffff;
+            --fb-text-primary: #1c1e21;
+            --fb-text-secondary: #65676b;
+            --fb-border: #e4e6eb;
+            --fb-button-secondary: #e4e6eb;
+            --fb-button-secondary-hover: #d8dadf;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--fb-bg);
+            color: var(--fb-text-primary);
+        }
+
+        /* --- 1. WEBSITE HEADER --- */
+        .main-header {
+            background-color: #111;
+            color: #fff;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-container {
+            max-width: 1095px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 16px;
+        }
+        .brand-logo {
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        .nav-menu a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .nav-menu a:hover, .nav-item.active a {
+            color: #fff;
+        }
+
+        /* --- 2. FACEBOOK FANPAGE ZONE --- */
+        .profile-container {
+            background: var(--fb-white);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            max-width: 1095px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .cover-photo {
+            width: 100%;
+            height: 350px;
+            background-image: url('https://i83.servimg.com/u/f83/20/63/21/42/1110.jpg');
+            background-size: cover;
+            background-position: center;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            position: relative;
+        }
+
+        .profile-header-info {
+            padding: 0 32px 16px 32px;
+            display: flex;
+            align-items: flex-end;
+            margin-top: -30px;
+            border-bottom: 1px solid var(--fb-border);
+            position: relative;
+            z-index: 2;
+        }
+
+        .avatar-container {
+            width: 168px;
+            height: 168px;
+            border-radius: 50%;
+            border: 5px solid var(--fb-white);
+            overflow: hidden;
+            background: #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .page-details {
+            margin-left: 24px;
+            flex-grow: 1;
+            padding-bottom: 16px;
+        }
+
+        .page-name {
+            font-size: 32px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .verified-badge {
+            color: var(--fb-blue);
+            font-size: 20px;
+        }
+
+        .page-likes {
+            font-size: 15px;
+            color: var(--fb-text-secondary);
+            margin-top: 4px;
+        }
+
+        .action-buttons {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding-bottom: 16px;
+        }
+
+        .btn {
+            padding: 0 12px;
+            height: 36px;
+            border-radius: 6px;
+            border: none;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--fb-blue);
+            color: var(--fb-white);
+        }
+        .btn-primary:hover { background-color: var(--fb-blue-hover); }
+
+        .btn-secondary {
+            background-color: var(--fb-button-secondary);
+            color: #050505;
+        }
+        .btn-secondary:hover { background-color: var(--fb-button-secondary-hover); }
+
+        .page-menu {
+            display: flex;
+            list-style: none;
+            padding: 4px 32px;
+        }
+        .page-menu li a {
+            padding: 16px;
+            color: var(--fb-text-secondary);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            display: block;
+            border-bottom: 3px solid transparent;
+        }
+        .page-menu li.active a {
+            color: var(--fb-blue);
+            border-bottom-color: var(--fb-blue);
+        }
+
+        /* --- 3. MAIN CONTENTS LAYOUT (2 CỘT) --- */
+        .main-content, .main-wrapper {
+            max-width: 1095px;
+            margin: 16px auto;
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            gap: 16px;
+            padding: 0 16px;
+        }
+
+        .card {
+            background: var(--fb-white);
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            margin-bottom: 16px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .intro-list {
+            list-style: none;
+        }
+        .intro-item, .intro-link {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 14px;
+            font-size: 15px;
+            color: #050505;
+            line-height: 1.4;
+        }
+        .intro-item i, .intro-icon {
+            color: var(--fb-text-secondary);
+            width: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* Khung bài viết */
+        .post-card {
+            background: var(--fb-white);
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            margin-bottom: 16px;
+        }
+        .post-header, .post-author {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .post-avatar, .post-author-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 10px;
+            background: #ccc;
+        }
+        .post-avatar img, .post-author-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .post-author-info h4, .post-author-meta h2 {
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .post-author-meta h2 {
+            font-size: 18px;
+        }
+        .post-time, .post-author-meta span {
+            font-size: 13px;
+            color: var(--fb-text-secondary);
+        }
+        .post-content, .post-body {
+            font-size: 15px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        .post-body p {
+            margin-bottom: 12px;
+        }
+        .post-body ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+        .post-body li {
+            margin-bottom: 6px;
+        }
+        .post-image-container {
+            width: calc(100% + 32px);
+            margin-left: -16px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            background: var(--fb-bg);
+        }
+        .post-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            display: block;
+        }
+        .fb-interactions-area {
+            border-top: 1px solid var(--fb-border);
+            padding-top: 12px;
+            margin-top: 16px;
+        }
+        .post-footer-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: var(--fb-text-secondary);
+            border-top: 1px solid var(--fb-border);
+            padding-top: 12px;
+            margin-top: 12px;
+        }
+
+        /* --- 4. WEBSITE FOOTER --- */
+        .main-footer {
+            background-color: #1c1e21;
+            color: #fff;
+            padding: 40px 16px 20px 16px;
+            margin-top: 40px;
+        }
+        .footer-container {
+            max-width: 1095px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        .footer-col h3 {
+            font-size: 16px;
+            margin-bottom: 16px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 8px;
+            color: var(--fb-blue);
+        }
+        .footer-col p, .footer-col li {
+            font-size: 14px;
+            color: #bcc0c4;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col a {
+            color: var(--fb-blue);
+            text-decoration: none;
+        }
+        .footer-bottom {
+            max-width: 1095px;
+            margin: 30px auto 0 auto;
+            text-align: center;
+            font-size: 13px;
+            color: #8a8d91;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+
+        /* Responsive Mobile */
+        @media (max-width: 900px) {
+            .profile-header-info {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin-top: -60px;
+            }
+            .page-details { margin-left: 0; margin-top: 12px; }
+            .page-name { justify-content: center; }
+            .action-buttons { justify-content: center; width: 100%; flex-wrap: wrap; }
+            .main-content, .main-wrapper { grid-template-columns: 1fr; }
+            .nav-container { flex-direction: column; gap: 10px; }
+            .footer-container { grid-template-columns: 1fr; gap: 24px; }
+        }
     </style>
 </head>
 <body>
-    <main class="container">
-        
-        <!-- ĐỒ HỌA VÒNG TRÒN ÂM DƯƠNG CHÌM NỀN -->
-        <svg class="amduong-background" viewBox="0 0 100 100" xmlns="http://w3.org">
-            <path d="M50,10 A40,40 0 0,0 50,90 A20,20 0 0,0 50,50 A20,20 0 0,1 50,10 Z" fill="#b8860b"/>
-            <path d="M50,10 A40,40 0 0,1 50,90 A20,20 0 0,0 50,50 A20,20 0 0,1 50,10 Z" fill="none" stroke="#b8860b" stroke-width="1"/>
-            <circle cx="50" cy="30" r="5" fill="#fff"/>
-            <circle cx="50" cy="70" r="5" fill="#b8860b"/>
-        </svg>
 
-        <div class="content-wrapper">
-            <!-- ĐỒ HỌA LOGO BÁT QUÁI PHÍA TRÊN -->
-            <div class="logo-batquai">
-                <svg viewBox="0 0 100 100" xmlns="http://w3.org">
-                    <circle cx="50" cy="50" r="46" fill="none" stroke="#b8860b" stroke-width="2"/>
-                    <circle cx="50" cy="50" r="42" fill="none" stroke="#b8860b" stroke-width="0.75"/>
-                    <path d="M42,14 L58,14 M42,11 L58,11 M42,8 L58,8 M42,86 L58,86 M42,89 L48,89 M52,89 L58,89 M42,92 L58,92" stroke="#0a2540" stroke-width="2" fill="none"/>
-                    <path d="M11,42 L11,58 M8,42 L8,48 M8,52 L8,58 M14,42 L14,48 M14,52 L14,58 M89,42 L89,58 M86,42 L86,58 M92,42 L92,48 M92,52 L92,58" stroke="#0a2540" stroke-width="2" fill="none"/>
-                    <path d="M50,20 A30,30 0 0,0 50,80 A15,15 0 0,0 50,50 A15,15 0 0,1 50,20 Z" fill="#0a2540"/>
-                    <path d="M50,20 A30,30 0 0,1 50,80 A15,15 0 0,0 50,50 A15,15 0 0,1 50,20 Z" fill="none" stroke="#0a2540" stroke-width="1"/>
-                    <circle cx="50" cy="35" r="4" fill="#fff"/><circle cx="50" cy="65" r="4" fill="#0a2540"/>
-                </svg>
+    <!-- SDK Facebook (Dành cho khung bình luận) -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v18.0"></script>
+
+    <!-- 1. THANH MENU CHÍNH CỦA WEBSITE -->
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="brand-logo">HUANG GUOHUI</div>
+            <ul class="nav-menu">
+                <li class="nav-item active"><a href="#">Trang Chủ</a></li>
+                <li class="nav-item"><a href="https://masterthienuy.pro.vn" target="_blank">Tiểu Sử</a></li>
+                <li class="nav-item"><a href="https://lizquiehuivn.forumvi.com" target="_blank">Tin Tức</a></li>
+                <li class="nav-item"><a href="mailto:lizquiehui@gmail.com">Liên Hệ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 2. GIAO DIỆN PHẦN GIẢ LẬP FANPAGE FACEBOOK -->
+    <div class="profile-container">
+        <!-- Ảnh bìa -->
+        <div class="cover-photo"></div>
+
+        <!-- Thông tin chính của Page -->
+        <div class="profile-header-info">
+            <div class="avatar-container">
+                <img class="avatar-img" src="https://i83.servimg.com/u/f83/20/63/21/42/10000110.jpg" alt="Grand Master Thiên Uy Avatar">
+            </div>
+            
+            <div class="page-details">
+                <div class="page-name">
+                    Grand Master Thiên Uy
+                    <i class="fas fa-check-circle verified-badge" title="Trang đã xác minh"></i>
+                </div>
+                <div class="page-likes">102K người thích • 150K người theo dõi</div>
             </div>
 
-            <h1>THƯ NGỎ</h1>
-            <div class="subtitle">Về việc mời gọi liên kết hợp tác phát triển cộng đồng</div>
-            
-            <p class="no-indent"><strong>Kính gửi: Quý Tổ chức, Quý Doanh nhân, Quý Chức sắc Tôn giáo, các Nhà nghiên cứu, Học giả cùng toàn thể Quý Anh/Chị quan tâm.</strong></p>
-            <p>Lời đầu tiên, xin kính chúc Quý vị cùng gia quyến luôn mạnh khỏe, bình an, hạnh phúc và thành công.</p>
-            <p>Trong bối cảnh thế giới ngày càng kết nối, sự hợp tác giữa các cá nhân và tổ chức là nền tảng để tạo nên những giá trị bền vững cho xã hội. Với tinh thần phụng sự – kết nối – phát triển, chúng tôi mong muốn xây dựng một mạng lưới hợp tác rộng mở, quy tụ những con người có cùng khát vọng đóng góp cho cộng đồng.</p>
-
-            <h2>Chúng tôi trân trọng mời gọi Quý vị cùng tham gia liên kết trong các lĩnh vực như:</h2>
-            <ul>
-                <li>Nghiên cứu văn hóa, tôn giáo, giáo dục và khoa học xã hội.</li>
-                <li>Hoạt động từ thiện, nhân đạo và phát triển cộng đồng.</li>
-                <li>Truyền thông, xuất bản, xây dựng website, diễn đàn và chuyển đổi số.</li>
-                <li>Kết nối doanh nghiệp, chuyên gia, học giả và các tổ chức trong nước và quốc tế.</li>
-                <li>Tổ chức hội thảo, tọa đàm, đào tạo và các chương trình hợp tác khác.</li>
-            </ul>
-
-            <p>Chúng tôi tin rằng mỗi cá nhân đều có những giá trị riêng. Khi cùng chung tay hợp tác, những giá trị đó sẽ được lan tỏa mạnh mẽ hơn, góp phần xây dựng một cộng đồng đoàn kết, văn minh và phát triển bền vững.</p>
-            <p>Chúng tôi luôn sẵn sàng lắng nghe mọi ý tưởng, sáng kiến và mô hình hợp tác trên tinh thần tôn trọng, bình đẳng, minh bạch và cùng phát triển.</p>
-            <p>Rất mong nhận được sự quan tâm, đồng hành và hợp tác của Quý vị.</p>
-            <p>Xin chân thành cảm ơn và kính chúc Quý vị sức khỏe, hạnh phúc và thành công.</p>
-            <p class="no-indent">Trân trọng kính chào!</p>
-
-            <div class="signature-section">
-                <div class="signature-box">
-                    <div class="title-name">Luật gia. Hoàng Quốc Huy</div>
-                    <div class="title-sub">Thừa tác viên được phong chức bởi<br><b>Universal Life Church Ministries (USA)</b></div>
-                    <div class="title-sub" style="margin-top:4px;">Tiến sĩ Thần học Danh dự (D.Div.)<br><b>Universal Life Church Ministries (USA)</b></div>
-                </div>
-                          </div>
-
-            <div class="contact-box">
-                <strong style="color:var(--primary); display:block; margin-bottom:12px;">THÔNG TIN LIÊN HỆ CHÍNH THỨC</strong>
-                <div style="line-height:1.7;">
-                    📧 Email: <a href="mailto:hoangquochuysg81@gmail.com" class="contact-link">hoangquochuysg81@gmail.com</a><br>
-                    📞 Điện thoại: <a href="tel:0908587869" class="contact-link">0908 587 869</a><br>
-                    🌐 Website: <a href="https://hoangquochuyvn.blogspot.com" target="_blank" class="contact-link">:https//hoangquochuyvn.blogspot.com</a>
-               <li>GitHub: <a href="https://lizquiehui.github.io" target="_blank">https://lizquiehui.github.io</a></li>
-                </div>
-                <a href="mailto:hoangquochuysg81@gmail.com" class="btn">GỬI THƯ ĐỀ XUẤT HỢP TÁC</a>
+            <!-- Nút hành động -->
+            <div class="action-buttons">
+                <a href="https://zalo.me/84908587869" class="btn btn-primary" target="_blank">
+                    <i class="fab fa-facebook-messenger" style="font-size: 16px;"></i>
+                    Gửi tin nhắn
+                </a>
+                <a href="https://www.facebook.com/huangguohui.vn" class="btn btn-secondary">
+                    <i class="fas fa-thumbs-up"></i> Thích
+                </a>
             </div>
         </div>
-    </main>
-      <a href="https://info.flagcounter.com/GWJ8"><img src="https://s01.flagcounter.com/count2/GWJ8/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
-    <footer><p>© 2026 Bản quyền thuộc về Luật gia Hoàng Quốc Huy. Mọi quyền được bảo lưu.</p></footer>
+
+        <!-- Menu phụ của Page -->
+        <ul class="page-menu">
+            <li class="active"><a href="#">Bài viết</a></li>
+            <li><a href="https://lizquiehui.forumvi.com/t1-introduce-about-grand-master-liz-quiehui">Giới thiệu</a></li>
+            <li><a href="#">Ảnh</a></li>
+            <li><a href="#">Video</a></li>
+        </ul>
+    </div>
+
+    <!-- KHU VỰC THÂN TRANG 1: HIỂN THỊ DẠNG FANPAGE -->
+    <div class="main-content">
+        <!-- Cột trái: Giới thiệu chung -->
+        <div class="left-column">
+            <div class="card">
+                <div class="card-title">Giới thiệu</div>
+                <ul class="intro-list">
+                    <li class="intro-item">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Trang chính thức của Grand Master Thiên Uy.</span>
+                    </li>
+                    <li class="intro-item">
+                        <i class="fas fa-globe"></i>
+                        <a href="https://masterthienuy.pro.vn" target="_blank" style="color: var(--fb-blue); text-decoration: none;">masterthienuy.pro.vn</a>
+                    </li>
+                    <li class="intro-item">
+                        <i class="fas fa-phone"></i>
+                        <span>0908587869</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Cột phải: Bài viết feed -->
+        <div class="right-column">
+            <div class="post-card">
+                <div class="post-header">
+                    <div class="post-avatar">
+                        <img src="https://i83.servimg.com/u/f83/20/63/21/42/17839310.jpg" alt="Avatar">
+                    </div>
+                    <div class="post-author-info">
+                        <h4>Grand Master Thiên Uy</h4>
+                        <div class="post-time">Vừa xong · <i class="fas fa-globe"></i></div>
+                    </div>
+                </div>
+                
+                <div class="post-content">
+                    Chào mừng mọi người đã ghé thăm Fanpage chính thức của tôi. 
+                    Hãy cùng đón chờ những nội dung chia sẻ giá trị sắp tới nhé!
+                </div>
+
+                <div class="post-image-container">
+                    <img class="post-image" src="https://i83.servimg.com/u/f83/20/63/21/42/1310.jpg" alt="Post Image">
+                </div>
+
+                <!-- Khung tương tác bình luận Facebook -->
+                <div class="fb-interactions-area">
+                    <div class="fb-comments" data-href="https://masterthienuy.pro.vn/post-1" data-width="100%" data-numposts="5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- KHU VỰC THÂN TRANG 2: NỘI DUNG THƯ NGỎ WEBSITE -->
+    <div class="main-wrapper">
+        <!-- Cột trái: Hồ sơ chi tiết -->
+        <aside class="left-col">
+            <div class="card">
+                <div class="card-title">Thông tin chi tiết</div>
+                <ul class="intro-list">
+                    <li class="intro-link">
+                        <span class="intro-icon">💼</span>
+                        <div><strong>Luật gia</strong> tại Việt Nam</div>
+                    </li>
+                    <li class="intro-link">
+                        <span class="intro-icon">🎓</span>
+                        <div><strong>Tiến sĩ Thần học danh dự</strong> (Universal Life Church - USA)</div>
+                    </li>
+                    <li class="intro-link">
+                        <span class="intro-icon">📜</span>
+                        <div><strong>Thừa tác viên</strong> phong chức bởi ULC (USA)</div>
+                    </li>
+                    <li class="intro-link">
+                        <span class="intro-icon">🌐</span>
+                        <div>Khu vực hoạt động:<br><strong>Việt Nam | Hoa Kỳ | Thái Lan | Singapore</strong></div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Cột phải: Chi tiết bức thư ngỏ -->
+        <main class="right-col">
+            <article class="card">
+                <div class="post-author">
+                    <img class="post-author-img" src="https://i83.servimg.com/u/f83/20/63/21/42/17839310.jpg" alt="Avatar nhỏ">
+                    <div class="post-author-meta">
+                        <h2>Thư Ngỏ Từ Grand Master Thiên Uy - Huang Guohui</h2>
+                        <span><i class="fas fa-globe"></i> Bài viết hệ thống công khai</span>
+                    </div>
+                </div>
+
+                <div class="post-body">
+                    <p>Trong bối cảnh xã hội hiện đại không ngừng phát triển, việc tìm kiếm một lối sống cân bằng, đánh thức năng lượng tích cực nội tại và kiến tạo một tư duy thành công bền vững ngày càng trở nên quan trọng. Với tâm nguyện lan tỏa những giá trị chân-thiện-mỹ và đồng hành cùng cộng đồng trên hành trình hoàn thiện bản thân, hệ thống website thương hiệu cá nhân chính thức đã được ra mắt tại địa chỉ: <a href="https://masterthienuy.pro.vn" target="_blank">https://masterthienuy.pro.vn</a>.</p>
+
+                    <p>Website không chỉ là một cổng thông tin trực tuyến, mà còn được định vị như một "trạm sạc năng lượng" tinh thần, nơi kết nối và chia sẻ kiến thức chuyên sâu trong các lĩnh vực:</p>
+
+                    <ul>
+                        <li>✨ <strong>Tư vấn & Đào tạo Phong thủy:</strong> Ứng dụng các quy luật năng lượng tự nhiên một cách khoa học để cải thiện không gian sống, kích hoạt tài lộc và hanh thông sự nghiệp.</li>
+                        <li>✨ <strong>Định hình Phong cách sống:</strong> Hướng dẫn xây dựng lối sống tích cực, thanh lịch, kết nối sâu sắc với bản thân và thế giới xung quanh.</li>
+                        <li>✨ <strong>Phát triển Tư duy Thành công:</strong> Chia sẻ những bài học, triết lý sống giá trị giúp khai phá tiềm năng, định hình tư duy đột phá cho cá nhân và doanh nghiệp.</li>
+                    </ul>
+
+                    <p>With a refined, minimalist yet profoundly informative interface, this website serves as a repository for the journey of dedication by <strong>Grand Master Fengshui Liz QuieHui</strong>. Concurrently, it acts as a direct conduit for destined individuals to schedule consultations, participate in training courses, or stay updated with the latest professional insights.</p>
+
+                    <p>Chào mừng tất cả mọi người ghé thăm không gian số <a href="https://masterthienuy.pro.vn" target="_blank">Website Huang Guohui</a> để cùng mở ra những góc nhìn mới, đón nhận nguồn năng lượng hưng vượng và làm chủ vận mệnh của chính mình.</p>
+
+                    <p>Sự đồng hành của mọi người trên hành trình này chính là động lực to lớn để chúng tôi tiếp tục lan tỏa những giá trị tốt đẹp cho cuộc sống!</p>
+
+                    <p><em>Xin chân thành cảm ơn và trân trọng!</em></p>
+                    
+                    <div style="margin-top: 30px; border-top: 1px dashed #e4e6eb; padding-top: 15px;">
+                        <strong>Trân trọng,</strong><br><br>
+                        <span style="font-size: 17px; font-weight: 700; color: #111;">Luật gia Hoàng Quốc Huy</span><br>
+                        Grand Master Fengshui – Liz QuieHui<br>
+                        Chủ tịch Hội đồng Khoa học Trung tâm Nghiên cứu Ứng dụng Phong Thủy Thiên Uy
+                    </div>
+                </div>
+
+                <div class="post-footer-stats">
+                    <div>✨ Kết nối tri thức - Khơi nguồn hưng vượng</div>
+                    <div>Thư chia sẻ chung</div>
+                </div>
+            </article>
+        </main>
+    </div> 
+
+    <!-- 3. CHÂN TRANG (FOOTER) CHUYÊN NGHIỆP -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Cột 1 -->
+            <div class="footer-col">
+                <h3>Về Tác Giả</h3>
+                <p><strong>Luật gia Hoàng Quốc Huy</strong></p>
+                <p>Grand Master Fengshui – Liz QuieHui</p>
+                <p>Chủ tịch Hội đồng Khoa học Trung tâm Nghiên cứu Ứng dụng Phong Thủy Thiên Uy.</p>
+            </div>
+            
+            <!-- Cột 2 -->
+            <div class="footer-col">
+                <h3>Thông Tin Liên Hệ</h3>
+                <p>📞 <strong>Hotline/Zalo:</strong> 0908587869</p>
+                <p>✉ <strong>Email 1:</strong> lizquiehui@gmail.com</p>
+                <p>✉ <strong>Email 2:</strong> lizquiehui@protonmail.com</p>
+                <p>🌐 <strong>Website:</strong> <a href="https://masterthienuy.pro.vn" target="_blank">masterthienuy.pro.vn</a></p>
+            </div>
+            
+            <!-- Cột 3 -->
+            <div class="footer-col">
+                <h3>Mạng Lưới Hoạt Động</h3>
+                <ul>
+                    <li>🇻🇳 <strong>Việt Nam:</strong> Văn phòng chính thức tại Quận 1, TP.HCM</li>
+                    <li>🇺🇸 <strong>Hoa Kỳ:</strong> Trao đổi học thuật phi chính phủ</li>
+                    <li>🇸🇬 <strong>Singapore:</strong> Nghiên cứu năng lượng địa lý</li>
+                    <li>🇹🇭 <strong>Thái Lan:</strong> Giao lưu văn hóa triết học tâm linh</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            &copy; 2026 Grand Master Fengshui Liz QuieHui. Bảo lưu mọi quyền thương hiệu.
+        </div>
+    </footer>
+
 </body>
 </html>
